@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //localStorage is a web API that allows you to store data in a user's browser with no expiration date. The data remains available even after the user closes the browser or restarts their computer.
+
+
+//Methods of localStorage-------------------------------
+// Method	Description-----------------------
+// localStorage.setItem(key, value)	=>Stores a key-value pair in localStorage.
+// localStorage.getItem(key) =>	Retrieves the value associated with a key.
+// localStorage.removeItem(key) =>	Removes a specific key from localStorage.
+// localStorage.clear() =>	Clears all data from localStorage.
+// localStorage.length	=> Returns the number of stored items.
+// localStorage.key(index) =>	Retrieves the key at the given index.
+
+
+
+// Storing and Retrieving Data-------------------
+//example:-----------------------------------
+localStorage.setItem('username','Sakura');
+let name =localStorage.getItem('username');
+console.log(name);
+
+
+// Checking if a Key Exists------------------------
+if (localStorage.getItem('username')) {
+    console.log('User exist :',localStorage.getItem('username'));
+    
+}
+else{
+    console.log('user not found');
+}
+
+//Removing an Item------------------------------
+localStorage.removeItem("username");
+console.log(localStorage.getItem("username")); // Output: null
+
+
+// Clearing All Data------------------------------------
+localStorage.setItem("age", "19");
+localStorage.setItem("surname", "Rojer");
+
+console.log(localStorage.length); // Output: 2
+console.log(localStorage); //{age: '19', surname: 'Rojer', length: 2} 
+console.log(localStorage.key(0)); //name
+console.log(localStorage.key(2)); //userInfo
+console.log(localStorage.key(3)); //city
+console.log(localStorage.key(4)); //surname
+
+//localStorage.clear(); // Clears all stored data
+
+console.log(localStorage.length); // Output: 0
+
+
+// -------------------------------------
+localStorage.setItem("name", "Sakura");
+localStorage.setItem("age", "19");
+localStorage.setItem("city", "Mumbai");
+
+for (let i = 0; i < localStorage.length; i++) {
+  let key = localStorage.key(i);
+  let value = localStorage.getItem(key);
+  console.log(`${key}: ${value}`);}
+
+
+//Using JSON.stringify() and JSON.parse() for Objects--------------------------
+// Since localStorage only stores strings, we need to convert objects to strings before storing them and parse them back when retrieving.
+// JSON.stringify(obj) => convert obj to Json string
+// JSON.parse(string) => convert string to obj (must be a valid Json) 
+
+let user = { PINCODE: 400044, college:'Ruia', city: "Banglore" };
+
+// Convert object to string and store it
+localStorage.setItem("userInfo", JSON.stringify(user));
+
+// Retrieve and parse the object
+let retrievedUser = JSON.parse(localStorage.getItem("userInfo"));
+console.log(retrievedUser.PINCODE); 
+console.log(retrievedUser.college);  
+
+
+//-----------------------------------------------
+// let key =prompt('Enter key you want to set');
+// let value =prompt('Enter key you want to set');
+// localStorage.setItem(key,value);
+// console.log(`The value at ${key} is ${localStorage.getItem(key)}`);
+// if (key==0) {
+//     localStorage.clear();
+// }
+
+
+
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

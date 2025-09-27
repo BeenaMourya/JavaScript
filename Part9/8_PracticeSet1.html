@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <h2> JavaScript Mouse out Method </h2>  
+    <p id = "para"> </p>  
+    <div id = "DIV" onmouseover = "demoDIVFunction()"
+     onmouseout = "demoOutFunction()" >  
+    The javascript mouse-out event works after removing the pointer on the particular tag. It is a mouse event to handle functionality to disable the mouseout function.  
+    </div>  
+
+ <h2> Keypress</h2>
+ <input type="text" id="inputBox" placeholder="Type something here">
+ <p id="output">Key will appear here when pressed...</p>
+
+ <h2>Scroll Event Listener</h2>
+ <div id="scrollable" style="height: 100px; overflow-y: scroll; border: 1px solid black;">
+    <p>Item 1</p>
+    <p>Item 2</p>
+    <p>Item 3</p>
+    <p>Item 4</p>
+    <p>Item 5</p>
+  </div>
+  <!-- Q2 -->
+<!-- <img src="/Part8_/spiderman_img.png" alt="spy-man" id="img" onload="onLoad()" onerror="onError()"> -->
+
+<!--   Q3 -->
+<input placeholder="enter your name" id="inp">
+<h2 id="inpH2">Your Name Will Appear Here....</h2>
+
+
+<script>
+    // (onmouseover) : when the mouse enters an element
+    // mouse leaves the element (onmouseout).
+function demoDIVFunction() { 
+document.getElementById("para").innerHTML = "JavaScript Mouse Out Method activates successfully!!!"; 
+document.getElementById("DIV").style.fontSize = "18px";  
+document.getElementById("DIV").style.color = "red";  
+}
+
+function demoOutFunction() {  
+document.getElementById("para").innerHTML = "LOL...!"; 
+document.getElementById("para").style.fontSize = "20px";  
+document.getElementById("DIV").style.fontSize = "12px";  
+document.getElementById("DIV").style.color = "black";  
+}  
+
+
+// ---------------------------Keypress-----------------------------
+// Triggered when a key is pressed, but only for printable characters (letters, numbers, punctuation).
+//Triggered for all key presses, including special keys like Enter, Shift, and Backspace.
+  const inputBox = document.getElementById('inputBox');
+  const output = document.getElementById('output');
+  inputBox.addEventListener('keypress', (event) => {
+      output.textContent = `You pressed: ${event.key}`;
+        });
+//----------------------Scroll-----------------------------------
+ 
+const scrollable = document.getElementById('scrollable');
+
+scrollable.addEventListener('scroll', (e) => {
+    console.log(`Scrolled inside element: ${scrollable.scrollTop}px`);
+    console.log(e);
+    
+    
+  });
+
+
+// ------------------------load----------------------------
+//This event fires when the entire page (including all images, stylesheets, and sub-resources) has fully loaded.
+ function onLoad() {
+   alert("in=mg laoded successfully");
+};
+ function onError () {
+   alert("Error  in  laoding img... , unsuccessfully!");
+};
+
+// Q2. create a button using js .add an event listener to the button.that changes the button's color to green when it is clicked.
+
+let btnCreate = document.createElement('button');
+btnCreate.innerText ="Clic.....";
+document.querySelector('body').append(btnCreate);
+btnCreate.style.backgroundColor="pink";
+btnCreate.style.padding="10px";
+btnCreate.style.margin="20px";
+
+btnCreate.addEventListener('click',function () {
+btnCreate.style.backgroundColor="green";
+})
+
+//Qs3.Create an  input element on the page with a placeholder”enter your name ”and an H2 heading on the page inside HTML.The purpose of this input element is to enter a user’s name so it should only input letters from a-z,A-Z and space(all other characters should not be detected).Whenever the user inputs their name,their input should be dynamically visible inside the heading.[Please note that no other character apart from the allowed characters should be visible in the heading]
+
+let inp =document.querySelector('#inp');
+let h2 =document.querySelector('#inpH2');
+ inp.addEventListener('input',function () {
+  const validinput = inp.value.replace(/[^a-zA-Z]/g, ' ' )
+  inp.value =validinput;
+  h2.innerText = validinput 
+ });
+
+
+
+</script> 
+</body>
+</html>

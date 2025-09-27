@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/action">
+        <input placeholder="username">
+        <button>Register</button>
+    </form>
+    <script>
+        let form =document.querySelector('form');
+        form.addEventListener('submit',function(e){//submitEvent
+            console.log("form submitted");
+console.log(e);
+         alert("form submited");      
+        })
+//.... to prevent the default actions of form use event.preventDefault
+
+form.addEventListener('submit',function(e){
+    e.preventDefault();
+    console.log("prevented the  Default action");
+}
+)
+    </script>
+</body>
+</html>

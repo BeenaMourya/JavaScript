@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{ 
+        background-color: pink;
+        height: 200px;
+        width: 200px;
+    }
+    ul{
+        background-color: blue;
+    }
+    li{
+        background-color: chartreuse;
+    }
+</style>
+<body>
+    <div>
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+    </div>
+
+<script>
+
+// 1. in the above html code the 1st event is triggered on the list items li was clicked
+//2.  Then it bubbles up to the parent ul  is ("ul was clicked")logged
+//2.  Then it bubbles up to the parent Div  is ("div was clicked")logged
+//......... Continues to higher ancestors (e.g., body, html).
+
+//Why Event Bubbling is Useful:
+//1. Event Delegation: You can add one listener to a parent instead of many listeners to its children.
+//2. Custom Logic: You can decide where and how to stop or handle events as they bubble up.
+
+//Stopping Event Bubbling:
+// If you don’t want the event to bubble up, you can use:
+// use :-    event.stopPropagation();
+
+let div=document.querySelector('div'); 
+let ul=document.querySelector('ul'); 
+let li=document.querySelectorAll('li'); 
+
+div.addEventListener('click',function(){
+    event.stopPropagation();
+    console.log("div was clicked");
+})
+ul.addEventListener('click',function(){
+    event.stopPropagation();
+    console.log("ul was clicked");
+})
+
+for (const lists of li) {
+    lists.addEventListener('click',function(){
+        event.stopPropagation();
+    console.log("li was clicked");
+})
+}
+
+
+
+ 
+</script>
+
+
+
+
+
+
+</body>
+</html>

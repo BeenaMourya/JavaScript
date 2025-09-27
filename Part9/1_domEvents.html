@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   .box {
+      width: 200px;
+      height: 200px;
+      background-color: lightgray;
+      border: 1px solid black;
+    } 
+</style>
+<body>
+<!-- <button onclick="console.log('button was clicked');
+">click me!</button> -->
+<button id="one">click 1</button>
+<button>click 2</button>
+<button>click 3</button>
+<button>click 4</button>
+<button>click 5</button>
+<div class="box" id="myBox">Hover over me!</div>
+
+<script>
+
+//DOM EVENTS:---------------------
+//events are signals that something has occurred(user input/action)
+
+//onclick :[ when an element is clicked]
+// onmousenter :[ when mouse enters an element]
+
+//example 1:-------------
+let btn =document.querySelector('#one');
+// console.log(btn);
+// btn.onclick=function(){
+//     console.log("btn was click");
+// }
+//or-------------
+function sayHello(params) {
+  alert('Hello');
+}
+// btn.onclick = sayHello;//// Pass the reference
+
+//example 2 :------------------ 
+let Allbtn =document.querySelectorAll('button');
+for ( btn of Allbtn ) {
+    // console.log("Assigning onclick to:", btn);
+btn.onclick = sayHello;
+}
+// Note:---------------------
+//we cant apply multiple properties/functions to a single element with  onclick event handler
+
+// onmousenter : ---------------------------
+
+const box = document.getElementById('myBox');
+box.onmouseenter=function(){
+    box.style.backgroundColor='blue';
+}; 
+box.onmouseleave = function () {
+    box.style.backgroundColor='lightgray';
+};
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

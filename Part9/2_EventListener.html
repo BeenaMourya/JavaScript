@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #dblclick{
+        height:50px;
+       width: 105px;
+       background-color: aqua;
+       border: 2px solid black;
+
+    }
+</style>
+<body>
+    
+<button>click 1</button>
+<button>click 2</button>
+<button>click 3</button>
+<div id="dblclick">DoubleClicking</div>
+    <script>
+        //addEventListener -----------------------
+        //addEventListener is a powerful JavaScript method used to attach an event handler to an element. Unlike setting the onclick property, addEventListener allows you to attach multiple event handlers to the same event on a single element without overwriting them.
+
+//syntax:-------
+        // element.addEventListener(event, function, options);
+
+        // Parameters -------------------------
+//event: The name of the event (e.g., 'click', 'mouseenter', 'mouseleave', etc.).
+// function: The event handler function to execute when the event occurs.
+// options (optional): An object or a boolean to specify options (e.g., capture, once, passive).
+
+//........example 1 :-------------------------
+let btns = document.querySelectorAll('button');
+for (const btn of btns) {
+    btn.addEventListener("click",sayHello);
+    btn.addEventListener("click",sayName);
+   
+}
+function sayHello(params) {
+    alert('Hello');
+}
+function sayName(params) {
+    alert('Beena');
+}
+
+//........example 2 :-------------------------
+let dblclicking = document.getElementById('dblclick');
+dblclicking.addEventListener("dblclick",function(){
+        console.log("I caught you,. double click me");
+        dblclicking.style.backgroundColor='yellow';
+    });
+// dblclicking.addEventListener('mouseenter',function(){
+   
+// }  )
+
+
+
+
+
+
+    </script>
+</body>
+</html>

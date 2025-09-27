@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="username" id="user">
+    <input placeholder="pwd" id="pwd">
+    <button>submit</button>
+
+    <p id="para">My Profession Coding</p>
+ <input placeholder="Type something" id="i2">
+
+
+    <script>
+        //Change event : the change event occurs when the value of an element has been changed (only works on <input>,<textarea> and <select> element);
+
+
+        //input event :  The input event fires when the value of an <input>,<select>,or<textarea> element has been changed     
+
+            // ---------------------------
+            let user=document.querySelector('#user');
+            user.addEventListener('change',function () {
+               console.log("input changed");
+               console.log("final value =",this.value);
+                //track the final value
+            })
+            user.addEventListener('input',function () {
+               console.log("input event");
+               console.log("final value =",this.value);
+                //track each element
+            })
+
+
+            // -----------------------------------
+
+  let inpt =document.querySelector('#i2');
+let par =document.querySelector('#para');
+
+inpt.addEventListener('input',function () {
+    console.log(inpt.value);
+    par.innerText =inpt.value;
+})
+
+
+
+    </script>
+</body>
+</html>

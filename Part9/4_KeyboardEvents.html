@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="txt here">
+    <input type="text" placeholder="Move the hero" id="hero">
+    <button>Click me!</button>
+
+
+
+
+<script>
+let btn =document.querySelector('button');
+btn.addEventListener("click",function (event) {
+  console.log(event);//PonterEvent{};
+    
+})
+btn.addEventListener("dblclick",function (event) {
+  console.log(event);//MouseEvent{};
+    
+})
+
+
+// ----------------------------------
+let input= document.querySelector('input');
+// input.addEventListener("keydown",function(input){
+//     console.log('key pressed');
+//     console.log(input);
+    
+// });
+// input.addEventListener("keyup",function(input){
+//     console.log('key was up ');  
+//     //vincenzo ,hendsome bodyguard,big mouth,weak hero class,all of us are dead,sweet home all season,bloodhounds, the king of pigs, the revange of others
+// });
+input.addEventListener("keydown",function(event){
+    console.log('key was down ');  
+  console.log(event); 
+  console.log(event.key); 
+  console.log(event.code); 
+  
+});
+// ------------------------------------
+
+let heroInp =document.getElementById('hero');
+heroInp.addEventListener('keydown',function (event) {
+    console.log("code",event.code);
+    //ArrowUp,ArrowDown,ArrowRight,ArrowLeft
+    if (event.code=='ArrowUp') {
+        console.log('Jump');  
+    }
+    else if  (event.code=='ArrowDown') {
+        console.log('Bend');  
+    }
+    else if (event.code=='ArrowRight') {
+        console.log('Move foreword');  
+    }
+    else if (event.code=='ArrowLeft') {
+        console.log('Move Backword');  
+    }
+    else{
+        console.log("wrong input . enter ArrowUp,ArrowDown,ArrowRight,ArrowLeft");
+    
+    }
+})
+
+
+</script>
+
+</body>
+</html>

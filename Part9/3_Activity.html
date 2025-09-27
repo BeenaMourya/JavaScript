@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body{
+    text-align: center;
+  
+}
+   div{
+    height: 300px;
+    width: 600px;
+    border: 1px solid black; 
+    margin: auto;
+   } 
+   button{
+    height: 50px;
+    width: 200px;
+   }
+
+</style>
+<body>
+
+<h2>Generate a random color</h2>
+<button>Generate Color</button><br><br>
+<div>This is tour new color</div>
+
+   <script>
+    let btn =document.querySelector('button');
+btn.style.backgroundColor='blue';
+btn.style.color='white';
+
+  btn.addEventListener('click',function(){
+    let h2 = document.querySelector('h2');
+    let randomColor = getRandomColor();
+    h2.innerText = randomColor;
+
+    
+let div =document.querySelector('div');
+div.style.backgroundColor= randomColor;
+  });
+
+
+function getRandomColor() {
+    let red = Math.floor(Math.random()*255);
+    let green = Math.floor(Math.random()*255);
+    let blue = Math.floor(Math.random()*255);//0-255
+let color = `rgb(${red},${green},${blue})`;
+return color;
+
+
+
+}
+
+
+
+
+   </script> 
+
+
+
+</body>
+</html>

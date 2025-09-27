@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/submitact">
+
+<input placeholder="Enter name" id="name">
+<input type="password"id="pwd" placeholder="Enter password">
+
+        <h3>Are you above +18 </h3>
+    <input type="radio" value="yes"name="radi">Yes
+    <input type="radio" value="no" name="radi">No
+<br>
+
+    <input placeholder="Enter Opinion" style="height: 40px; width: 170px;padding-left:100px ;margin-left: 30px;">
+  <br>
+
+  <p>have you read  the above  details   <input type="checkbox"></p>
+  <h1>Select Your Favorite Fruit</h1>
+  <label for="fruits">Choose a fruit:</label>
+<select id="fruits" name="fruits">
+<option value="select ">Select</option>    
+<option value="apple">apple</option>    
+<option value="banana">banana</option>    
+<option value="cherry">cherry</option>    
+<option value="kiwi">kiwi</option>    
+<option value="mango">mango</option>    
+</select>
+  <button>Submit it </button>
+
+
+    </form>
+<script>
+let form=document.querySelector("form");
+// form.addEventListener('submit',function (event) {
+//     event.preventDefault();
+
+//     let pwd =document.getElementById('pwd');
+// console.log(pwd.value);
+// // console.dir(input);
+
+// let Name =document.getElementById('name');
+// console.log(Name.value);
+
+// alert(`Hi,${Name.value},your password is set to ${pwd.value}`);
+// })
+// --------------------------------
+
+//......  we can also directly select each elements
+
+form.addEventListener('submit',function (event) {
+    event.preventDefault();
+    console.dir(form);//form obj
+
+    let Name =this.elements[1];
+    let pwd =form.elements[0];
+
+console.log(Name.value);
+console.log(pwd.value);
+
+alert(`Hi,${Name.value},your password is set to ${pwd.value}`);
+})
+//  reminder :- Since the event listener is attached to the form object and is a callback for the submit event, the this inside the function (event) callback refers to the form element that triggered the event.
+
+</script>
+</body>
+</html>

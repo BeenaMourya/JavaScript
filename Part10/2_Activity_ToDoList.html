@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Todo App</h1>
+<input placeholder="enter your task">
+<button>Add Task</button>
+<ul>
+    <li>Eat <button class="del">Delete</button></li>
+    <li >Sleep<button class="del">Delete</button></li>
+    <li>Study <button class="del">Delete</button></li>
+    
+
+</ul>
+    <script>
+let btn = document.querySelector('button');
+let inpt =document.querySelector('input');
+let UL = document.querySelector('ul');
+
+btn.addEventListener('click',function () {
+   
+let newli =document.createElement('li');
+newli.innerText =inpt.value;
+
+let delBtn =document.createElement('button');
+delBtn.innerText = "Delete";
+delBtn.classList.add('del');
+newli.appendChild(delBtn);
+
+UL.appendChild(newli);
+inpt.value=''; 
+});
+
+
+// let delbtns = document.getElementsByClassName("del");
+// for (const de of delbtns) {
+//     de.addEventListener('click',function () {
+//        let Btn_Parent_Ul = this.parentElement;
+//        console.log(Btn_Parent_Ul);
+//        Btn_Parent_Ul.remove();
+//     })
+// }
+
+//---------------or------------------
+
+// .... In the above case we can't delete the dom elements using the event listners because the event_Listenrs only apply to the existing elements 
+//note : element created in DOM are not the existing elements its new element
+//........ instead of adding the en=vent listeners to the current element add it to the parent element
+//------------------------------------------------------------
+
+//Event Delegation in JavaScript is a technique where you add an event listener to a parent element instead of adding it to multiple child elements. This leverages[makes use of something efficiently] the concept of event bubbling, where events triggered on a child element "bubble up" to its ancestors.
+
+// Why use Event Delegation?
+// Better Performance: Reduces the number of event listeners.
+// Dynamic Content Handling: Handles elements that are dynamically added to the DOM.
+
+//How it works:
+// Attach a single event listener to a parent element.
+// Use the event's target property to identify which child element triggered the event.
+
+//Key Points:
+// event.target: Refers to the actual element that triggered the event.
+// .matches(selector): Used to check if the clicked element matches a specific selector.
+
+UL.addEventListener('click',function(event){
+   // console.dir(event.target);// Logs the element that was clicked
+    // target :  used in event listeners to identify which element was interacted with 
+    // console.dir(event.target.nodeName);
+    if (event.target.nodeName== "BUTTON") {
+       let listItem = event.target.parentElement;
+        console.log(listItem);
+        
+       listItem.remove();
+    }
+    
+})
+//Key Points About event.target:
+// Element That Triggered the Event: It provides a reference to the actual element that dispatched the event.
+// Event Bubbling: If the event listener is attached to a parent element, event.target will still refer to the child element that initiated the event, not the parent.
+// Useful in Delegation: It is commonly used in event delegation to handle events for dynamically added elements or multiple child elements within a parent.
+
+
+
+
+
+
+    </script>
+</body>
+</html>
+
+
+
+

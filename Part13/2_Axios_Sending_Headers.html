@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script> 
+  
+  
+  
+  
+  
+  
+  <script>
+ //----------sending Headers with http request --------------------
+
+
+
+    const url ="https://icanhazdadjoke.com/";
+async function getJoke() {
+    try{
+     const config_Info={ headers:{Accept:"application/json"   } };
+        let res = await axios.get(url,config_Info);
+        console.log(res);
+        console.log(res.data);
+        }
+catch(er){
+console.log("er = " ,er);
+}
+    }
+    getJoke();
+    // ---------------------------------------------------
+
+    const ul ="https://icanhazdadjoke.com/slack";
+async function getJokes() {
+    try{
+        let res = await axios.get(ul);
+        console.log(res);
+        console.log(res.data);
+
+             let jokeText = res.data.attachments[0].text; // Extracting the joke
+        console.log(jokeText); // Logs the joke
+        }
+catch(er){
+console.log("er = " ,er);
+}
+    }
+    // getJokes();
+
+
+// ----------------Updating Query Strings in url-----------------
+
+
+
+</script>
+  
+  
+</body>
+</html>
