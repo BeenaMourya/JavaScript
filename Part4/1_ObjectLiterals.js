@@ -29,7 +29,11 @@ const post ={
 
 // console.log(post);
 // console.log(post.username);
+<<<<<<< HEAD
 console.log(post['likes']);
+=======
+// console.log(post['likes']);
+>>>>>>> 595569a799b0679c328caf1b85686cf76f866f6c
 // console.log(post["tags"]);
 
 // let id = "username";
@@ -40,9 +44,15 @@ console.log(post['likes']);
 
 // -------Get values---------------------------
 
+<<<<<<< HEAD
 //.... JS automatically converts objects keys to strings.
 
 //..... Even if we made the number as a key ,the number will be converted to string 
+=======
+//JS automatically converts objects keys to strings.
+
+//Even if we made the number as a key ,the number will be converted to string 
+>>>>>>> 595569a799b0679c328caf1b85686cf76f866f6c
 
 const obj ={
 12 :"bin",// all keys are string
@@ -63,7 +73,11 @@ details: { //........ nested object
 
 // console.log(obj);
 console.log(obj[12]); //converted to string then compare with keys then print the values
+<<<<<<< HEAD
 // console.log(obj.12);  //gives an error :- 12 is assume as number not taken as string 
+=======
+// console.log(obj.12);  //gives an error :- .12 is assume as number not taken as string 
+>>>>>>> 595569a799b0679c328caf1b85686cf76f866f6c
 console.log(obj[null]);
 console.log(obj.null);
 
@@ -118,6 +132,7 @@ let person = { name, age }; // Equivalent to { name: name, age: age }
 console.log(person); // { name: "Charlie", age: 30 }
 
 
+<<<<<<< HEAD
 //. Using this in Object Literals-------------------------------
 // The this keyword refers to the current object.
 
@@ -126,6 +141,15 @@ let pers = {
     greet() {
         // console.log(`Hi, I'm ${nam}!`);//nam not defined 
         console.log(`Hi, I'm ${this.nam}!`);
+=======
+//. Using this in Object Literals
+// The this keyword refers to the current object.
+
+let pers = {
+    name: "Alice",
+    greet() {
+        console.log(`Hi, I'm ${this.name}!`);
+>>>>>>> 595569a799b0679c328caf1b85686cf76f866f6c
     }
 };
 pers.greet(); // "Hi, I'm Alice!"

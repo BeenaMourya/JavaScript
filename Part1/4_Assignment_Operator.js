@@ -1,6 +1,10 @@
 // Q1. what is the value of after this code runs?
 let age = 3;
+<<<<<<< HEAD
 age+=12;
+=======
+age+=+12;
+>>>>>>> 595569a799b0679c328caf1b85686cf76f866f6c
 console.log(age);
 
 //Identifiers

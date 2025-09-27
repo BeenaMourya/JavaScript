@@ -14,9 +14,15 @@ function avg(a,b,c) {
 // avg(2,4,31);
 
 // multiplication------------
+<<<<<<< HEAD
 function multi(n) { // n=3
  for (let i = 1; i <=10; i++) {
    console.log(n*i); // 3 6 9 12 15 ...
+=======
+function multi(n) {
+ for (let i = 1; i <=10; i++) {
+   console.log(n*i);
+>>>>>>> 595569a799b0679c328caf1b85686cf76f866f6c
  }  
  console.log("--------");
    
@@ -34,7 +40,11 @@ function sum(a,b) {
 
 // return sum of 1 to n------------------------
 
+<<<<<<< HEAD
 function Sum_N(n) { //5
+=======
+function Sum_N(n) {
+>>>>>>> 595569a799b0679c328caf1b85686cf76f866f6c
 let sum =0;
   for (let i = 1; i <=n; i++) {
  sum+=i;
@@ -67,4 +77,8 @@ console.log(conCat(str));
 
 
 
+<<<<<<< HEAD
 
+=======
+// chatGPT practice --------------------------------
+>>>>>>> 595569a799b0679c328caf1b85686cf76f866f6c

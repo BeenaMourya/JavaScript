@@ -1,4 +1,5 @@
 //Arrays are Mutable----------------------
+<<<<<<< HEAD
 let arr =[2,"bin",4,5.3,6,7];
 // console.log(arr[0]);
 // console.log(arr[1][0]="p") ; //no change in original bina
@@ -10,6 +11,14 @@ let arr =[2,"bin",4,5.3,6,7];
 
 // ---------------------
 
+=======
+// let arr =[2,"bin",4,5.3,6,7];
+// console.log(arr[0]);
+// console.log(arr[1][0]); 
+// console.log(arr.length);
+// console.log(arr);
+// ---------------------
+>>>>>>> 595569a799b0679c328caf1b85686cf76f866f6c
 // let empty = [];
 // empty[0]="Zero";
 // empty[1]="one";
@@ -23,10 +32,18 @@ let arr =[2,"bin",4,5.3,6,7];
 // empty[0][1]="Z";
 
 // console.log(empty);
+<<<<<<< HEAD
  
 // console.log(empty[0][1]); 
 // console.log(empty[0].length); 
 
+=======
+
+// console.log(empty[0][1]); 
+// console.log(empty[0].length); 
+
+
+>>>>>>> 595569a799b0679c328caf1b85686cf76f866f6c
 // Methods---------------------------------
 // push :add to end 
 // pop: delete end and return
@@ -36,7 +53,11 @@ let arr =[2,"bin",4,5.3,6,7];
 // indexOf : return index of something ,or -1 if not found
 //includes : search for a value [true or false ]
 
+<<<<<<< HEAD
 //concat : merge 2 arrays 
+=======
+//concat : merde 2 arrays 
+>>>>>>> 595569a799b0679c328caf1b85686cf76f866f6c
 //reverse: reverse an array
 
 //slice : copies a portion of an array
@@ -70,7 +91,11 @@ let cars = ["audi","BMW","Safari"];
 let con1 =["90car"];
 let con = ["1carozox","2car","3car","4car","5car"];
 // console.log(con1.concat(con));
+<<<<<<< HEAD
 // console.log(con.reverse()); 
+=======
+// console.log(con.reverse());
+>>>>>>> 595569a799b0679c328caf1b85686cf76f866f6c
 
 
 // console.log(con.slice()); //copies whole array
@@ -82,6 +107,7 @@ let con = ["1carozox","2car","3car","4car","5car"];
 // console.log(con.slice(-2)); //         from last 
 
 
+<<<<<<< HEAD
 let col_Splice = ['pink','yellow','green','orange','purple',"Brown","Black","Grey"];
 // console.log(col_Splice.splice(2)); //..start
 //  [ 'green', 'orange', 'purple' ]
@@ -101,11 +127,27 @@ col_Splice.splice(3,0,"brown" );
 
 // console.log(col_Splice.splice(4,1,"yoyo"));
 // console.log(col_Splice);
+=======
+let col_Splice = ['pink','yellow','green','orange','purple'];
+console.log(col_Splice.splice(2)); //start
+console.log(col_Splice.splice(2,4)); //start,deleteCount [........deleter elements form start to deletecount ]
+console.log(col_Splice); //[ 'pink', 'yellow' ]
+
+console.log(col_Splice.splice(1,0,"Black","grey","blue" )); //start,deleteCount ,add element
+console.log(col_Splice);
+
+console.log(col_Splice.splice(3,0,"brown" )); 
+console.log(col_Splice);
+
+console.log(col_Splice.splice(4,1,"yoyo"));
+console.log(col_Splice);
+>>>>>>> 595569a799b0679c328caf1b85686cf76f866f6c
 
 
 
 let num = [ 12, 13,14,43,52,25,100];
 let days = ["mon","tue","wed","thurs","fri","sat"];
+<<<<<<< HEAD
 
 // days.sort();
 // console.log(days);
@@ -117,6 +159,14 @@ console.log(num); // convert the number into characterd then character wise arra
 //Why is this happening?
 // The sort() method in JavaScript, by default, converts elements to strings and compares their UTF-16 code unit values. This means the sorting is lexicographical (dictionary order) rather than numerical.
 
+=======
+console.log(days);
+days.sort();
+console.log(days);
+console.log(num);
+num.sort();
+console.log(num); // convert the number into characterd then character wise arrange of num
+>>>>>>> 595569a799b0679c328caf1b85686cf76f866f6c
 
 
 // -----------practice q------------------
@@ -136,5 +186,9 @@ let months =['jan','jul','mar','aug'];
 
 let language = ['c','c++','html','javascript','python','java','c#','sql'];
 console.log(language.reverse());
+<<<<<<< HEAD
 // console.log(language.indexOf('javascript'));
+=======
+console.log(language.indexOf('javascript'));
+>>>>>>> 595569a799b0679c328caf1b85686cf76f866f6c
 

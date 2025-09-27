@@ -1,6 +1,11 @@
 // function Expressions : another way of writing functions
 // Not Hoisted: Only accessible after its declaration.
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 595569a799b0679c328caf1b85686cf76f866f6c
 // let name =function(a,b){
 //     return a-b;
 // }
@@ -18,7 +23,10 @@ name =function(n){
 //*takes one or multiple functions as arguments
 // * returns a function
 
+<<<<<<< HEAD
 // example 1. 
+=======
+>>>>>>> 595569a799b0679c328caf1b85686cf76f866f6c
 let greet = function(){
     console.log("salve");
 }
@@ -30,22 +38,35 @@ let wishes = function(){
 //     funct(i);
 //     ; }   
 // }
+<<<<<<< HEAD
 function multipleGreet(funct,time) {
     let res =[];
     for (let i = 1; i <=time; i++) {
+=======
+function multipleGreet(funct,m) {
+    let res =[];
+    for (let i = 1; i <=m; i++) {
+>>>>>>> 595569a799b0679c328caf1b85686cf76f866f6c
     res.push(funct(i));
      }  
      return res; 
 }
 
+<<<<<<< HEAD
 // multipleGreet(greet,2);//salve salve
 
 // multipleGreet(wishes,3);  //All the Best *3
+=======
+// multipleGreet(greet,2);
+
+// multipleGreet(wishes,3);
+>>>>>>> 595569a799b0679c328caf1b85686cf76f866f6c
 
 // multipleGreet(function () {
 //     arr=[1,2,5];
 //     console.log(arr); 
 // },4);
+<<<<<<< HEAD
 num =function(n){
     // console.log(n*n);
     return n*n;
@@ -71,6 +92,18 @@ console.log(multipleGreet(num(),6));//calling num
 
 // nam(): This invokes the function and runs its code, returning the result immediately.
 // nam:  This passes the function as a reference so it can be invoked later by something else (like multipleGreet).
+=======
+
+console.log(multipleGreet(name,6));
+
+
+//here we are not passing the function as an argument instead we are  calling the function  which will only be do calling of that function .
+//pass function as argument by name only no parenthesis
+//if () parenthesis are passed with name i will work as calling of funtion
+
+
+
+>>>>>>> 595569a799b0679c328caf1b85686cf76f866f6c
 
 
 // To Avoid Undefined----------------------------------------------------------
@@ -96,6 +129,7 @@ function grr(name) {
 }
 // let msg   = grr("Sakura");
 // console.log(msg);
+<<<<<<< HEAD
 
 
 
@@ -157,3 +191,5 @@ divide(a,b ){return a/b}
 }
 
 
+=======
+>>>>>>> 595569a799b0679c328caf1b85686cf76f866f6c

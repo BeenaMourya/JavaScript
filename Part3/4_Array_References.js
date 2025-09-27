@@ -2,6 +2,7 @@
 
 // console.log('name'=='name');// ..........true
 // console.log('name'==='name');//.......true
+<<<<<<< HEAD
 console.log('5'*4);//.......true [string 5 is is(Implicit Type Conversion )type coerced to a number ]
 console.log('5'-3); //2
 
@@ -13,6 +14,10 @@ console.log([1,3,2]==[1,2]);//..........false
 //.....Similar to the first case, each [2] is a separate object in memory with a unique reference.
 //.....The === operator checks both the type and the reference for equality. Since the references are different, it also evaluates to false.
 
+=======
+// console.log([1]==[1]);//..........false
+// console.log([2]===[2]);
+>>>>>>> 595569a799b0679c328caf1b85686cf76f866f6c
 // console.log([]==[]);//........false
 // console.log([]===[]); //........This condition will always return 'false' since JavaScript compares objects by reference, not value.
 

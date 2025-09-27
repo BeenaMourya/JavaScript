@@ -14,15 +14,25 @@ console.log(msg.toLowerCase());
 console.log(msg.toUpperCase());
 
 // String With Arguments-------------------------
+<<<<<<< HEAD
 //Arguments is a value that we pass to the method.
+=======
+//Arguments is a value that we pass to thr method.
+>>>>>>> 595569a799b0679c328caf1b85686cf76f866f6c
 
 
 // indexOf------
 // returns the first index of occurrence of some value in string. or gives -1 if not found
 let masg = "ILoveCoding";
+<<<<<<< HEAD
 console.log(masg.indexOf("i"));//8
 console.log(masg.indexOf("o"));//2
 console.log(masg.indexOf("Lovmvdmv"));//-1
+=======
+// console.log(masg.indexOf("i"));//8
+// console.log(masg.indexOf("o"));//2
+// console.log(masg.indexOf("Lov"));//1
+>>>>>>> 595569a799b0679c328caf1b85686cf76f866f6c
 
 
 // Method chaining ---------------------------
@@ -41,7 +51,10 @@ console.log(n.slice(-3)); // n.length -3 => 9-3 =>6  //olo
 // searches a value in the string and return a new string with the value replaced 
 let str = "LOveYou.";
 console.log(str.replace("O","o"));
+<<<<<<< HEAD
 console.log(str);  //remain same as original
+=======
+>>>>>>> 595569a799b0679c328caf1b85686cf76f866f6c
 
 // repeat------------------------------
 // returns a string with the number of copies of a string

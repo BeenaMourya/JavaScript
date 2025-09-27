@@ -37,6 +37,7 @@ function innerfun() {
     console.log(x);
     console.log(y);
     console.log(hoisting);
+<<<<<<< HEAD
     console.log("hoisting");
     
 }
@@ -47,6 +48,17 @@ innerfun(); // function scope :
 }
 
 outerFun(); //invoking the function
+=======
+    
+}
+console.log(a); // error : not accessible from child function
+
+let hoisting = "can access before initializatino";
+// innerfun(); // function scope : 
+}
+
+// outerFun(); //invoking the function
+>>>>>>> 595569a799b0679c328caf1b85686cf76f866f6c
 
 //Qs. what will be the output ?
 let greet = "hello";  //global scope

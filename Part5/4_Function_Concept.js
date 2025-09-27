@@ -81,12 +81,20 @@ function aLoop(value,i,j) {
 // Collects arguments into a single array.
 // Must always be the last parameter in the function.
 //ex 1.
+<<<<<<< HEAD
 function adNu(a,b,c,...othe) { // // The '...othe' parameter collects arbitrary arguments into an array
+=======
+function adNu(a,b,c,...othe) {
+>>>>>>> 595569a799b0679c328caf1b85686cf76f866f6c
     console.log(othe); //[ 7, 6, 8 ]
     return a+b+c; ////21
 }
 let ress =adNu(12,4,5,7,6,8); 
+<<<<<<< HEAD
 console.log(ress);  
+=======
+console.log(ress); 
+>>>>>>> 595569a799b0679c328caf1b85686cf76f866f6c
 
 
 //2. In Destructuring Arrays-----------------
@@ -106,7 +114,11 @@ const { name, ...details } = { name: "Alice", age: 25, location: "NY" };
 console.log(name); // Output: "Alice"
 console.log(details); // Output: { age: 25, location: "NY" }
 
+<<<<<<< HEAD
 // Spread -------------------------------------
+=======
+// Spread 
+>>>>>>> 595569a799b0679c328caf1b85686cf76f866f6c
 // The spread operator is used to expand an array or object into individual elements or properties.
 
 // Key Points:
@@ -121,7 +133,11 @@ function getNames(n1,n2,n3) {
 getNames(names[0],names[1],names[2]);
 getNames(...names);//...names syntax in JavaScript is the spread operator. It is used to unpack an iterable (like an array) into individual elements. Let’s break down how it works with your code example
 // The spread operator ...names takes the elements of the names and "spreads" them into individual arguments. So, the function call becomes
+<<<<<<< HEAD
 // getNames(names)
+=======
+getNames(names)
+>>>>>>> 595569a799b0679c328caf1b85686cf76f866f6c
 
 //ex 2.
 // Example 1: Expanding an array in a function call
@@ -179,7 +195,11 @@ function goodbye(namee) {
 }
 function userName(callbackfunction) {//function callback as parameter
     const name ="Sakura";
+<<<<<<< HEAD
     callbackfunction(name);//argumrnt name
+=======
+    callbackfunction(name);
+>>>>>>> 595569a799b0679c328caf1b85686cf76f866f6c
 }
 userName(greeting);
 userName(goodbye);
@@ -202,6 +222,7 @@ console.log(doubleTheIncrement(3));
 //this keyword: The value of this inside a function depends on how and where the function is called.
 
 let obje ={ num:123};
+<<<<<<< HEAD
 
 function show() {
     console.log(this.num);
@@ -228,3 +249,14 @@ gr.call(persn,'helloww','!');
 
 //In Short:
 // .call() is used to call a function with a specific this context, and optionally, pass arguments.
+=======
+function show() {
+    console.log(this.num);
+}
+show.call(obje);
+
+
+
+
+
+>>>>>>> 595569a799b0679c328caf1b85686cf76f866f6c
